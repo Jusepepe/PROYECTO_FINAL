@@ -124,17 +124,13 @@ payButton.addEventListener('click', (event) => {
 })
 
 const form4 = document.getElementById('form4');
-form.addEventListener('submit', (event)=>{
-    let formData = new FormData(form4);
-    let data = Object.fromEntries(formData);
-    let jsonData = JSON.stringify(data);
+form4.addEventListener('submit', (event)=>{
 
     event.preventDefault();
     fetch('https://proyecto-final-untf.onrender.com/user/register', {
         method: 'POST',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
-        body: jsonData,
     }).then(res => res.json())
     .then(result => {console.log(result)
         window.location.href='https://proyecto-final-untf.onrender.com/login/index.html'}
