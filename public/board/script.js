@@ -74,6 +74,7 @@ form3.addEventListener('submit', (event) => {
 
 const productList = document.getElementById("products");
 const cartList = document.getElementById("cart");
+const myProducts = document.getElementById("myProducts");
 
 const productButton = document.getElementById("showProducts");
 
@@ -150,3 +151,23 @@ form4.addEventListener('submit', (event)=>{
         window.location.href='https://proyecto-final-untf.onrender.com/login/index.html'}
     )
     .catch(err => console.log(err))});
+
+const myProductsButton = document.getElementById("showMyProducts");
+
+myProductsButton.addEventListener('click',(event)=> {
+    event.preventDefault();
+
+    fetch('https://proyecto-final-untf.onrender.com/cart/myProducts', {
+        method: 'GET',
+        credentials: "include",
+        headers: {'Content-Type' : 'application/json'},
+    }).then(res => res.json())
+    .then(products => {
+        myProducts.innerHTML = "";
+        let newElement = document.createElement("li");
+        let text = document.createTextNode(`${JSON.stringify(products)}`)
+        newElement.appendChild(text);
+        myProducts.appendChild(newElement);        
+    })
+    .catch(err => console.log(err))
+})
