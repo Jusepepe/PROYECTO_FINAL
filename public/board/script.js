@@ -139,7 +139,7 @@ payButton.addEventListener('click', (event) => {
 
 const form4 = document.getElementById('form4');
 form4.addEventListener('submit', (event)=>{
-
+    console.log("logout")
     event.preventDefault();
     fetch('https://proyecto-final-untf.onrender.com/user/logout', {
         method: 'POST',
