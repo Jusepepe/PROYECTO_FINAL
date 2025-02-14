@@ -41,7 +41,6 @@ oauth.addEventListener('click',(event)=> {
                 method: 'POST',
                 credentials: "include",
                 headers: {'Content-Type' : 'application/json'},
-                body: jsonData,
             }).then(res => res.json())
             .then(result => {
                 if(result.message === "El usuario ya está logeado") window.location.href = "https://proyecto-final-untf.onrender.com/board/index.html"
