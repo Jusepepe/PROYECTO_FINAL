@@ -171,3 +171,23 @@ myProductsButton.addEventListener('click',(event)=> {
     })
     .catch(err => console.log(err))
 })
+
+const form5 = document.getElementById('form5');
+form5.addEventListener('submit', (event) => {
+    
+    let formData = new FormData(form5);
+    let data = Object.fromEntries(formData);
+    let id = data.id;
+    let quantity = data.quantity;
+
+    event.preventDefault();
+    fetch(`https://proyecto-final-untf.onrender.com/cart/add/${id}/${quantity}`, {
+        method: 'PATCH',
+        credentials: "include",
+        headers: {'Content-Type' : 'application/json'},
+    }).then(res => res.json())
+    .then(result => console.log(result))
+    .catch(err => console.log(err))
+
+
+});
