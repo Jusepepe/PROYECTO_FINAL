@@ -141,7 +141,7 @@ const form4 = document.getElementById('form4');
 form4.addEventListener('submit', (event)=>{
 
     event.preventDefault();
-    fetch('https://proyecto-final-untf.onrender.com/user/register', {
+    fetch('https://proyecto-final-untf.onrender.com/user/logout', {
         method: 'POST',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
