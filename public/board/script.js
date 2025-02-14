@@ -1,3 +1,17 @@
+document.onload = () => {
+    fetch(`https://proyecto-final-untf.onrender.com/user/myAccount`, {
+        method: 'GET',
+        credentials: "include",
+        headers: {'Content-Type' : 'application/json'},
+        body: jsonData,
+    }).then(res => res.json())
+    .then(result => {
+        console.log(result)
+        if(!result.user) window.location.href = 'https://proyecto-final-untf.onrender.com/login/index.html';
+    })
+    .catch(err => console.log(err))
+}
+
 const form = document.getElementById('form');
 form.addEventListener('submit', (event) => {
 
