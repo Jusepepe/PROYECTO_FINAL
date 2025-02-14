@@ -43,7 +43,8 @@ oauth.addEventListener('click',(event)=> {
                 body: jsonData,
             }).then(res => res.json())
             .then(result => {
-                if(result.message === "El usuario ya está logeado"||result.user) window.location.href = "https://proyecto-final-untf.onrender.com/board/index.html"
+                console.log(user)
+                if(result.message === "El usuario ya está logeado"||result.user.id) window.location.href = "https://proyecto-final-untf.onrender.com/board/index.html"
             })
             .catch(err => console.log(err))
         }
