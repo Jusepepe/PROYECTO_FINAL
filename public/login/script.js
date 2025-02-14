@@ -7,7 +7,7 @@ function handleSubmit(event){
     let jsonData = JSON.stringify(data);
 
     event.preventDefault();
-    fetch('http://localhost:4080/user/login', {
+    fetch('https://proyecto-final-untf.onrender.com/user/login', {
         method: 'POST',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
@@ -25,7 +25,7 @@ oauth.addEventListener('click',(event)=> {
     event.preventDefault();
 
     const popup = window.open(
-        "http://localhost:4080/oauth/github/login",
+        "https://proyecto-final-untf.onrender.com/oauth/github/login",
         "githubLogin",
         "width=600,height=700"
     );

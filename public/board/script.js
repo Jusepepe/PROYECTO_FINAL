@@ -6,7 +6,7 @@ form.addEventListener('submit', (event) => {
     let jsonData = JSON.stringify(data);
 
     event.preventDefault();
-    fetch(`http://localhost:4080/product`, {
+    fetch(`https://proyecto-final-untf.onrender.com/product`, {
         method: 'POST',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
@@ -27,7 +27,7 @@ form2.addEventListener('submit', (event) => {
     let quantity = data.quantity;
 
     event.preventDefault();
-    fetch(`http://localhost:4080/product/${id}/${quantity}`, {
+    fetch(`https://proyecto-final-untf.onrender.com/product/${id}/${quantity}`, {
         method: 'PATCH',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
@@ -46,7 +46,7 @@ form3.addEventListener('submit', (event) => {
     let id = data.id;
 
     event.preventDefault();
-    fetch(`http://localhost:4080/product/${id}`, {
+    fetch(`https://proyecto-final-untf.onrender.com/product/${id}`, {
         method: 'GET',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},

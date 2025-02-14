@@ -4,7 +4,7 @@ form.addEventListener('submit', handleSubmit);
 function handleSubmit(event){
 
     event.preventDefault();
-    fetch('http://localhost:4080/user/logout', {
+    fetch('https://proyecto-final-untf.onrender.com/user/logout', {
         method: 'POST',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
