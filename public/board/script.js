@@ -66,7 +66,7 @@ const productButton = document.getElementById("showProducts");
 productButton.addEventListener('click',(event)=> {
     event.preventDefault();
 
-    fetch('http://localhost:4080/product/', {
+    fetch('https://proyecto-final-untf.onrender.com/product/', {
         method: 'GET',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
@@ -89,7 +89,7 @@ const cartButton = document.getElementById("showCart");
 cartButton.addEventListener('click',(event)=> {
     event.preventDefault();
 
-    fetch('http://localhost:4080/user/myCarts', {
+    fetch('https://proyecto-final-untf.onrender.com/user/myCarts', {
         method: 'GET',
         credentials: "include",
         headers: {'Content-Type' : 'application/json'},
@@ -110,7 +110,7 @@ payButton.addEventListener('click', (event) => {
     event.preventDefault();
 
     const popup = window.open(
-        "http://localhost:4080/payments/start",
+        "https://proyecto-final-untf.onrender.com/payments/start",
         "Pago",
         "width=600,height=700"
     );

@@ -33,8 +33,8 @@ export class PaymentModel extends Model{
         const session = await stripe.checkout.sessions.create({
             line_items,
             mode : "payment",
-            success_url : `http://localhost:${process.env.PORT}/payments/success?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url : `http://localhost:${process.env.PORT}/payments/cancel?session_id={CHECKOUT_SESSION_ID}`
+            success_url : `https://proyecto-final-untf.onrender.com/payments/success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url : `https://proyecto-final-untf.onrender.com/payments/cancel?session_id={CHECKOUT_SESSION_ID}`
         })
         console.log(session.url)
         return session.url
