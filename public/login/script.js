@@ -15,7 +15,7 @@ function handleSubmit(event){
     }).then(res => res.json())
     .then(result => {
         console.log(result)
-        if(result.message === "El usuario ya está logeado"||result.user) window.location.href = "https://proyecto-final-untf.onrender.com/board/index.html"
+        if(result.message === "El usuario ya está logeado"||result.id) window.location.href = "https://proyecto-final-untf.onrender.com/board/index.html"
     })
     .catch(err => console.log(err))
 
