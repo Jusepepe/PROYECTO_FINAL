@@ -13,7 +13,9 @@ function handleSubmit(event){
         headers: {'Content-Type' : 'application/json'},
         body: jsonData,
     }).then(res => res.json())
-    .then(result => console.log(result))
+    .then(result => {
+        if(result.message === "El usuario ya está logeado") window.location.href = "https://proyecto-final-untf.onrender.com/board/index.html"
+    })
     .catch(err => console.log(err))
 
 
@@ -34,6 +36,7 @@ oauth.addEventListener('click',(event)=> {
     const checkPopup = setInterval(() => {
         if (popup.closed) {
             clearInterval(checkPopup);
+            window.location.href = "https://proyecto-final-untf.onrender.com/board/index.html"
         }
     }, 1000);
 })
