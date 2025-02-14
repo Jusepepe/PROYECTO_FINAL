@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.form{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: 4px solid #000 ;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 5px
+}
