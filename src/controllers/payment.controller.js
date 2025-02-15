@@ -4,25 +4,33 @@ import { PaymentModel, ProductModel, CartModel } from "../models/index.js";
 export class PaymentController{
 
     static async getPayments(req, res){
+        try{
         const payments = await PaymentModel.getPayments();
         if(!payments) return res.json({ message: "Tabla de pagos vacía" });
         res.json(payments)
+    }catch{}
     }
 
     static async getPaymentsByUser(req, res){
+        try{
         const userID = req.session.user.id;
         const payments = await PaymentModel.getPaymentsbyUser(userID);
         if(!payments) return res.json({ message : "No se encontraron pagos!"});
         res.json(payments)
+    }catch{}
     }
 
     static async getPayments(req, res){
+        try{
         const payments = await PaymentModel.getPayments();
         if(!payments) return res.json({ message : "No se encontraron pagos!"});
         res.json(payments)
+    }catch{}
     }
 
     static async startPayment(req, res){
+
+        try{
         const cartID = req.session.user.cartID;
         const cart = await CartModel.getCartbyID(cartID);
 
@@ -36,9 +44,11 @@ export class PaymentController{
         if(!redirectUrl) return res.json({ message : "No  se pudo crear la sesión de pago"});
 
         res.redirect(303, redirectUrl);
+    }catch{}
     }
 
     static async createPayment(req, res){
+        try{
         const cartID = req.session.user.cartID;
         const sessionID = req.query.session_id;
         const userID = req.session.user.id;
@@ -53,5 +63,6 @@ export class PaymentController{
             })
         }
         res.json(payment)
+    }catch{}
     }
 }

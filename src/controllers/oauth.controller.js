@@ -10,6 +10,7 @@ export class OauthController{
 
     static async githubCallback(req, res){
 
+        try{
         if(req.session.user) return res.json({ message : "El usuario ya está logeado" })
         const code = req.query.code;
 
@@ -25,6 +26,7 @@ export class OauthController{
             sameSite: 'lax',
         })
         .json(user)
+    }catch{}
     }
 
     static async githubCallbackTest(req, res){

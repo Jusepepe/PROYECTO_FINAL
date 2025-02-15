@@ -1,0 +1,410 @@
+{
+	"info": {
+		"_postman_id": "9532667e-a88c-4362-a2be-9fd67a29c398",
+		"name": "IDAT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40887046"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "Inicio de sesión",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\":\"micorreo@correo.com\",\r\n    \"contraseña\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/user/login",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salir de sesión",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/user/logout",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/user/",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar mis carritos de compra",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/user/myCarts",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"user",
+								"myCarts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar mis pagos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/user/myPayments",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"user",
+								"myPayments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar informacionde mi cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/user/myAccount",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"user",
+								"myAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\":\"micorreo@correo.com\",\r\n    \"contraseña\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/user/register",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "productos",
+			"item": [
+				{
+					"name": "Recuperar Todos los Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/product/",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar Producto por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/product/6",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"product",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Shampoo\",\r\n    \"stock\":10,\r\n    \"precio\":14.9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/product/",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aumentar o Disminuir stock de producto",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/product/6/10",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"product",
+								"6",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carritos de compras",
+			"item": [
+				{
+					"name": "Recuperar carritos de compra",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/cart",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recuperar los productos de mi carrito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/cart/myProducts",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"cart",
+								"myProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Añadir productos a mi carrito",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/cart/add/8/1",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"cart",
+								"add",
+								"8",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Producto del carrito",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/cart/remove/8",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"cart",
+								"remove",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inicio por oauth",
+			"item": [
+				{
+					"name": "Iniciar Sesion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://proyecto-final-untf.onrender.com/oauth/github/login",
+							"protocol": "https",
+							"host": [
+								"proyecto-final-untf",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"oauth",
+								"github",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pagos",
+			"item": [
+				{
+					"name": "recuperar pagos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
