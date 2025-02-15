@@ -4,6 +4,11 @@ import { Stripe } from "stripe"
 
 export class PaymentModel extends Model{
 
+    static async getPayments(){
+        const payments = await PaymentModel.findAll();
+        return payments
+    }
+
     static async getPaymentsbyUser(userID){
         const payments = await PaymentModel.findAll({ where : { userID } })
         return payments

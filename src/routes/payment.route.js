@@ -4,7 +4,7 @@ import { verifySignIn } from "../middlewares/verifySignIn.js";
 
 export const paymentRouter = Router();
 
-paymentRouter.get('/', PaymentController.getPaymentsByUser);
+paymentRouter.get('/', PaymentController.getPayments);
 paymentRouter.get('/success', [verifySignIn] , PaymentController.createPayment);
 paymentRouter.get('/cancel', [verifySignIn] , PaymentController.createPayment);
 paymentRouter.get('/start', [verifySignIn] , PaymentController.startPayment);

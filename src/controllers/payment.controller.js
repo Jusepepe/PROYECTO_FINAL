@@ -3,6 +3,12 @@ import { PaymentModel, ProductModel, CartModel } from "../models/index.js";
 
 export class PaymentController{
 
+    static async getPayments(req, res){
+        const payments = await PaymentModel.getPayments();
+        if(!payments) return res.json({ message: "Tabla de pagos vacía" });
+        res.json(payments)
+    }
+
     static async getPaymentsByUser(req, res){
         const userID = req.session.user.id;
         const payments = await PaymentModel.getPaymentsbyUser(userID);

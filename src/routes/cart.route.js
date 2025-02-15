@@ -5,7 +5,7 @@ import { verifySignIn } from "../middlewares/verifySignIn.js";
 export const cartRouter = Router();
 
 cartRouter.get('/', CartController.getCarts);
-cartRouter.get('/myProducts', CartController.getProducts);
+cartRouter.get('/myProducts', [verifySignIn] , CartController.getProducts);
 
 cartRouter.patch('/add/:product/:quantity', [verifySignIn] , CartController.addProduct);
-cartRouter.patch('/remove/:product/:quantity', [verifySignIn] , CartController.removeProduct);
+cartRouter.patch('/remove/:product', [verifySignIn] , CartController.removeProduct);
